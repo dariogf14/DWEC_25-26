@@ -9,9 +9,10 @@ const areaTriangulo = function calcularAreaTriangulo(base, altura) {
 }
 
 // 3
-
+const calcularAreaTrianguloArrow = (base, altura) => (base * altura) / 2;
 
 // 5
 const rectangulo = calcularAreaRectangulo(2,4)
 console.log(rectangulo)
 console.log(areaTriangulo(2,4))
+console.log(calcularAreaTrianguloArrow(2,4))
