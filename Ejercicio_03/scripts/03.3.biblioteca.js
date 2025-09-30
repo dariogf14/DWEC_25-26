@@ -1,28 +1,23 @@
-// biblioteca.js
-
-// 1. Definimos la colección de libros
 const libros = [
-  { id: 1, titulo: "Cien años de soledad", autor: "Gabriel García Márquez", paginas: 417 },
-  { id: 2, titulo: "Don Quijote de la Mancha", autor: "Miguel de Cervantes", paginas: 863 },
-  { id: 3, titulo: "1984", autor: "George Orwell", paginas: 328 },
-  { id: 4, titulo: "El principito", autor: "Antoine de Saint-Exupéry", paginas: 96 },
-  { id: 5, titulo: "Crimen y castigo", autor: "Fiódor Dostoyevski", paginas: 671 },
-  { id: 6, titulo: "Orgullo y prejuicio", autor: "Jane Austen", paginas: 432 },
-  { id: 7, titulo: "La Odisea", autor: "Homero", paginas: 541 },
-  { id: 8, titulo: "Fahrenheit 451", autor: "Ray Bradbury", paginas: 256 },
-  { id: 9, titulo: "Moby Dick", autor: "Herman Melville", paginas: 585 },
-  { id: 10, titulo: "Hamlet", autor: "William Shakespeare", paginas: 342 }
+  { id: 1, titulo: "Elantris", autor: "Brandon Sanderson", paginas: 638 },
+  { id: 2, titulo: "Mistborn: El Imperio Final", autor: "Brandon Sanderson", paginas: 541 },
+  { id: 3, titulo: "El Aliento de los Dioses", autor: "Brandon Sanderson", paginas: 672 },
+  { id: 4, titulo: "El Camino de los Reyes", autor: "Brandon Sanderson", paginas: 1007 },
+  { id: 5, titulo: "Palabras Radiantes", autor: "Brandon Sanderson", paginas: 1088 },
+  { id: 6, titulo: "El Hobbit", autor: "J.R.R. Tolkien", paginas: 310 },
+  { id: 7, titulo: "El Señor de los Anillos: La Comunidad del Anillo", autor: "J.R.R. Tolkien", paginas: 479 },
+  { id: 8, titulo: "El Señor de los Anillos: Las Dos Torres", autor: "J.R.R. Tolkien", paginas: 415 },
+  { id: 9, titulo: "El Señor de los Anillos: El Retorno del Rey", autor: "J.R.R. Tolkien", paginas: 416 },
+  { id: 10, titulo: "El Silmarillion", autor: "J.R.R. Tolkien", paginas: 365 }
 ];
 
-// 2. Función para agregar un nuevo libro
-function agregarLibro(nuevoLibro) {
+function agregarLibro(id, titulo, autor, paginas) {
+  const nuevoLibro = { id, titulo, autor, paginas };
   libros.push(nuevoLibro);
 }
 
-// 3. Función para obtener toda la colección
 function obtenerLibros() {
   return libros;
 }
 
-// Exportamos funciones
-module.exports = { agregarLibro, obtenerLibros };
+export { obtenerLibros, agregarLibro };
