@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    
+    <h1>Formulario de Validación</h1>
+    <form onsubmit="event.preventDefault(); generarInformeDeValidacion();">
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="email" id="email" placeholder="Email">
+        <button type="submit">Validar</button>
+    </form>
+    <div id="informe-errores"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
