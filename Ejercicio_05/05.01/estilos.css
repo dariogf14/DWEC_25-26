@@ -1,0 +1,7 @@
+.miniatura { 
+    width: 100px; cursor: pointer; opacity: 0.6; 
+}
+
+.activa { 
+    border: 3px solid blue; opacity: 1; 
+}
