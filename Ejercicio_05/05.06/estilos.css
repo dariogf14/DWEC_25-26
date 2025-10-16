@@ -1,0 +1,19 @@
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+button {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.panel {
+  padding: 15px;
+  border: 1px solid #000;
+}
+
+.oculto {
+  display: none;
+}
