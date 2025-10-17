@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Interactiva</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <h2>Tienda</h2>
+
+    <div id="productos">
+        <h3>Disponibles</h3>
+        <div class="producto">
+            <p class="nombre">Portátil</p>
+            <p class="precio">1200 €</p>
+            <button class="addBtn">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <p class="nombre">Ratón</p>
+            <p class="precio">25 €</p>
+            <button class="addBtn">Añadir al carrito</button>
+        </div>
+        <div class="producto">
+            <p class="nombre">Teclado</p>
+            <p class="precio">90 €</p>
+            <button class="addBtn">Añadir al carrito</button>
+        </div>
+    </div>
+
+    <div id="carrito">
+        <h3>Tu Carrito</h3>
+        <ul id="listaCarrito"></ul>
+        <p>Total: <span id="total">0.00 €</span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
