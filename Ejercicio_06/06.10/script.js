@@ -25,7 +25,7 @@ function renderizarCarrito() {
     listaCarrito.innerHTML = "";
     carrito.forEach(item => {
         const li = document.createElement("li");
-        li.textContent = `${item.nombre} (x${item.cantidad}) - ${item.precio * item.cantidad} €`;
+-        li.textContent = `${item.nombre} (x${item.cantidad}) - ${item.precio * item.cantidad} €`;
         listaCarrito.appendChild(li);
     });
     calcularTotal();
