@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Filtro de Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container my-4">
+    <h1 class="text-center mb-4">Filtro de Productos</h1>
+
+    <form id="filtros" class="row g-3 mb-4">
+      <div class="col-md-4">
+        <label class="form-label">Buscar por nombre:</label>
+        <input type="text" id="busqueda" class="form-control" placeholder="Escribe un nombre...">
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Categoría:</label>
+        <select id="categoria" class="form-select"></select>
+      </div>
+
+      <div class="col-md-3">
+        <label class="form-label">Precio máximo: <span id="precioValor">0</span> €</label>
+        <input type="range" id="precioMax" class="form-range" min="0" max="1500" value="1500">
+      </div>
+
+      <div class="col-md-2">
+        <label class="form-label">Ordenar por:</label><br>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="orden" id="asc" value="asc">
+          <label class="form-check-label" for="asc">Precio ↑</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="orden" id="desc" value="desc">
+          <label class="form-check-label" for="desc">Precio ↓</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="orden" id="az" value="az">
+          <label class="form-check-label" for="az">Nombre (A-Z)</label>
+        </div>
+      </div>
+    </form>
+
+    <div id="contenedorProductos" class="row g-3"></div>
+  </div>
+
+  <script src="productos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

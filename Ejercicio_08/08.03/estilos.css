@@ -1,0 +1,18 @@
+.actividad-card img { 
+    object-fit: cover; 
+    height: 160px; 
+}
+
+.error-msg { 
+    color: #b00020; 
+    font-size: 0.9rem; 
+}
+
+.campo-error { 
+    box-shadow: 0 0 0 0.15rem rgba(176,0,32,0.15); 
+}
+
+#listaItinerario {
+    max-height: 420px; 
+    overflow-y: auto;
+}
