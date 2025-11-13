@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Comentarios</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+
+            <h4 class="card-title mb-3">Comentarios</h4>
+
+            <div id="alert-area"></div>
+
+            <form id="comment-form" class="mb-4">
+              <div class="mb-2">
+                <input type="text" id="author" class="form-control" placeholder="Tu nombre" required>
+              </div>
+              <div class="mb-2">
+                <textarea id="commentText" class="form-control" placeholder="Escribe tu comentario..." rows="3" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar comentario</button>
+            </form>
+->
+            <ul id="comments-list" class="list-group">
+            </ul>
+
+            <p class="text-muted small mt-3">Simulación de sistema de comentarios con POST a webhook.site.</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
