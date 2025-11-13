@@ -1,0 +1,7 @@
+<manuscrito>
+    <texto>Revisa la lista: la palabra clave está en la tercera entrada en negrita.</texto>
+    <pista>Es la tercera entrada de la lista dentro del artículo.</pista>
+    <selector_solucion>article ul li:nth-child(3) strong</selector_solucion>
+    <letra_clave>S</letra_clave>
+    <siguiente_fragmento>null</siguiente_fragmento>
+</manuscrito>

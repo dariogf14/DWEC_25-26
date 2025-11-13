@@ -1,0 +1,65 @@
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+line-height: 1.4;
+}
+
+main {
+display: flex;
+gap: 20px;
+align-items: flex-start;
+}
+
+#texto-juego {
+flex: 1;
+max-width: 700px;
+border: 1px solid #ddd;
+padding: 12px;
+border-radius: 6px;
+}
+
+#controls {
+width: 280px;
+border: 1px solid #ddd;
+padding: 12px;
+border-radius: 6px;
+}
+
+#alfabeto {
+display: flex;
+flex-wrap: wrap;
+gap: 6px;
+margin: 8px 0;
+}
+
+.letra {
+display: inline-block;
+width: 28px;
+height: 28px;
+line-height: 28px;
+text-align: center;
+border: 1px solid #888;
+border-radius: 4px;
+cursor: pointer;
+user-select: none;
+}
+
+.letra.selected {
+background: #222;
+color: #fff;
+}
+
+.flash-red {
+animation: flashRed 600ms ease-in-out;
+}
+
+@keyframes flashRed {
+0% { box-shadow: 0 0 0 0 rgba(255,0,0,0.9); }
+50% { box-shadow: 0 0 12px 6px rgba(255,0,0,0.6); }
+100% { box-shadow: 0 0 0 0 rgba(255,0,0,0); }
+}
+
+/* mínima accesibilidad visual */
+button { padding: 6px 10px; }
+#pista-area p { margin: 6px 0; font-size: 0.95em; }
+#estado { font-weight: bold; margin-top: 8px; }

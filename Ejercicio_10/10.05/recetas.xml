@@ -1,0 +1,37 @@
+<recetas>
+    <aleacion>
+        <base>Hierro</base>
+        <mezcla>Carbono</mezcla>
+        <resultado>Acero</resultado>
+        <descripcion>Una aleación fuerte y versátil, usada durante siglos.</descripcion>
+    </aleacion>
+
+<aleacion>
+    <base>Cobre</base>
+    <mezcla>Estaño</mezcla>
+    <resultado>Bronce</resultado>
+    <descripcion>Más duro que el cobre, revolucionó la Edad de los Metales.</descripcion>
+</aleacion>
+
+<aleacion>
+    <base>Hierro</base>
+    <mezcla>Cromo</mezcla>
+    <resultado>Acero inoxidable</resultado>
+    <descripcion>Resistente a la corrosión, usado en utensilios y construcción moderna.</descripcion>
+</aleacion>
+
+<aleacion>
+    <base>Aluminio</base>
+    <mezcla>Cobre</mezcla>
+    <resultado>Duraluminio</resultado>
+    <descripcion>Ligero y resistente, usado en la industria aeronáutica.</descripcion>
+</aleacion>
+
+<aleacion>
+    <base>Plata</base>
+    <mezcla>Cobre</mezcla>
+    <resultado>Plata esterlina</resultado>
+    <descripcion>Brillante y duradera, ideal para joyería y cubertería fina.</descripcion>
+</aleacion>
+
+</recetas>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<calificaciones>
+    <calificacion alumno_id="1">
+        <asignatura>Desarrollo Web en Entorno Cliente</asignatura>
+        <nota>8.5</nota>
+    </calificacion>
+    <calificacion alumno_id="1">
+        <asignatura>Desarrollo Web en Entorno Servidor</asignatura>
+        <nota>7.0</nota>
+    </calificacion>
+    <calificacion alumno_id="1">
+        <asignatura>Despliegue de Aplicaciones Web</asignatura>
+        <nota>9.0</nota>
+    </calificacion>
+    <calificacion alumno_id="2">
+        <asignatura>Desarrollo Web en Entorno Cliente</asignatura>
+        <nota>6.5</nota>
+    </calificacion>
+    <calificacion alumno_id="2">
+        <asignatura>Desarrollo Web en Entorno Servidor</asignatura>
+        <nota>5.0</nota>
+    </calificacion>
+    <calificacion alumno_id="3">
+        <asignatura>Desarrollo Web en Entorno Cliente</asignatura>
+        <nota>10.0</nota>
+    </calificacion>
+    <calificacion alumno_id="3">
+        <asignatura>Diseño de Interfaces Web</asignatura>
+        <nota>9.5</nota>
+    </calificacion>
+    <calificacion alumno_id="4">
+        <asignatura>Desarrollo Web en Entorno Cliente</asignatura>
+        <nota>7.5</nota>
+    </calificacion>
+    <calificacion alumno_id="4">
+        <asignatura>Despliegue de Aplicaciones Web</asignatura>
+        <nota>6.0</nota>
+    </calificacion>
+    <calificacion alumno_id="5">
+        <asignatura>Diseño de Interfaces Web</asignatura>
+        <nota>8.0</nota>
+    </calificacion>
+    <calificacion alumno_id="5">
+        <asignatura>Desarrollo Web en Entorno Servidor</asignatura>
+        <nota>7.5</nota>
+    </calificacion>
+</calificaciones>

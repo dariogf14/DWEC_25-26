@@ -1,0 +1,9 @@
+<documento>
+    <id>3</id>
+    <titulo>Declaración Universal de los Derechos Humanos</titulo>
+    <fecha>1948</fecha>
+    <imagen>img/doc3.jpg</imagen>
+    <descripcion>Documento adoptado por la Asamblea General de las Naciones Unidas que proclama los derechos humanos básicos de todas las personas.</descripcion>
+    <siguiente>null</siguiente>
+    <anterior>documento_2.xml</anterior>
+</documento>

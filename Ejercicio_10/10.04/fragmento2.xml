@@ -1,0 +1,7 @@
+<manuscrito>
+    <texto>Busca la palabra enfatizada dentro de un párrafo del artículo principal.</texto>
+    <pista>Está en uno de los párrafos del artículo; mira las palabras en <strong>negrita</strong>.</pista>
+    <selector_solucion>article p strong</selector_solucion>
+    <letra_clave>E</letra_clave>
+    <siguiente_fragmento>fragmento3.xml</siguiente_fragmento>
+</manuscrito>

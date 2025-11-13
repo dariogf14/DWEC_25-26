@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Validador de Acceso al Búnker</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <h1>Acceso al Búnker</h1>
+
+<form id="form-acceso" onsubmit="return false;">
+    <label>
+        Código de Agente:
+        <input type="text" id="codigo" required>
+    </label>
+    <span id="msg-codigo"></span>
+    <br><br>
+    <label>
+        Clave de Acceso:
+        <input type="password" id="clave" required>
+    </label>
+    <span id="msg-clave"></span>
+    <br><br>
+    <button id="acceder" disabled>Acceder</button>
+</form>
+
+<script src="script.js"></script>
+
+</body>
+</html>

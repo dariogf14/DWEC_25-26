@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>El Manuscrito Cifrado</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>El Manuscrito Cifrado</h1>
+        <h2>Nuestro lema es <strong>TRASCENDER</strong></h2>
+    </header>
+
+<main>
+    <section id="texto-juego">
+        <article>
+            <p>En este manuscrito encontrarás pistas escondidas. Observa las <strong>palabras importantes</strong> y las <em>variantes</em> en los párrafos.</p>
+            <p>Busca en listas y títulos — todo puede ser relevante.</p>
+
+            <h3>Fragmento de ejemplo</h3>
+            <p>La <strong>clave</strong> podría estar en un encabezado o en una palabra enfatizada.</p>
+
+            <ul>
+                <li><strong>Primera</strong> entrada</li>
+                <li>Segunda entrada con <em>énfasis</em></li>
+                <li>Tercera con <strong>secreto</strong></li>
+            </ul>
+        </article>
+    </section>
+
+    <aside id="controls">
+        <button id="start">Empezar</button>
+        <div id="pista-area">
+            <p id="texto-fragmento"></p>
+            <p id="pista"></p>
+        </div>
+
+        <div id="alfabeto" aria-label="Alfabeto"></div>
+        <p>Letra seleccionada: <span id="letra-seleccionada">—</span></p>
+        <p>Intentos: <span id="contador-intentos">0</span></p>
+        <p id="estado"></p>
+    </aside>
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

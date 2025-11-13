@@ -1,0 +1,9 @@
+<documento>
+    <id>2</id>
+    <titulo>Constitución de los Estados Unidos</titulo>
+    <fecha>1787</fecha>
+    <imagen>img/doc2.jpg</imagen>
+    <descripcion>Establece las bases del gobierno federal y los derechos fundamentales de los ciudadanos estadounidenses.</descripcion>
+    <siguiente>documento_ultimo.xml</siguiente>
+    <anterior>documento_1.xml</anterior>
+</documento>

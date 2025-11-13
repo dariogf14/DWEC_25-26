@@ -1,0 +1,19 @@
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+
+form {
+border: 1px solid #ccc;
+padding: 15px;
+max-width: 300px;
+}
+
+span {
+margin-left: 10px;
+font-size: 0.9em;
+}
+
+#msg-codigo, #msg-clave {
+color: #007BFF;
+}

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<alumnos>
+    <alumno id="1">
+        <nombre>Ana</nombre>
+        <apellidos>García López</apellidos>
+        <email>ana.garcia@example.com</email>
+        <edad>22</edad>
+        <direccion>Calle Falsa, 123</direccion>
+        <localidad>Madrid</localidad>
+    </alumno>
+    <alumno id="2">
+        <nombre>Luis</nombre>
+        <apellidos>Martínez Pérez</apellidos>
+        <email>luis.martinez@example.com</email>
+        <edad>25</edad>
+        <direccion>Avenida Siempre Viva, 45</direccion>
+        <localidad>Barcelona</localidad>
+    </alumno>
+    <alumno id="3">
+        <nombre>Elena</nombre>
+        <apellidos>Sánchez Rodríguez</apellidos>
+        <email>elena.sanchez@example.com</email>
+        <edad>21</edad>
+        <direccion>Plaza Mayor, 1</direccion>
+        <localidad>Sevilla</localidad>
+    </alumno>
+    <alumno id="4">
+        <nombre>Javier</nombre>
+        <apellidos>Gómez Fernández</apellidos>
+        <email>javier.gomez@example.com</email>
+        <edad>28</edad>
+        <direccion>Paseo de la Castellana, 100</direccion>
+        <localidad>Madrid</localidad>
+    </alumno>
+    <alumno id="5">
+        <nombre>Sofía</nombre>
+        <apellidos>Díaz Moreno</apellidos>
+        <email>sofia.diaz@example.com</email>
+        <edad>23</edad>
+        <direccion>Calle Ancha, 22</direccion>
+        <localidad>Valencia</localidad>
+    </alumno>
+</alumnos>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen Práctico DWEC</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Gestión de Alumnos</h1>
+    </header>
+
+    <main class="container">
+
+        <section class="gestion-alumnos">
+            <h2>Listado de Alumnos</h2>
+            <div class="filtros">
+                <input type="text" id="filtro-nombre" placeholder="Filtrar por nombre o apellidos...">
+                <select id="ordenar-por">
+                    <option value="nombre-asc">Ordenar por Nombre (A-Z)</option>
+                    <option value="nombre-desc">Ordenar por Nombre (Z-A)</option>
+                    <option value="apellidos-asc">Ordenar por Apellidos (A-Z)</option>
+                    <option value="apellidos-desc">Ordenar por Apellidos (Z-A)</option>
+                </select>
+            </div>
+            <div class="tabla-container">
+                <table id="tabla-alumnos">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellidos</th>
+                            <th>Email</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Las filas de los alumnos se insertarán aquí dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <aside class="sidebar">
+            <section id="panel-gestion" class="panel">
+                <h2 id="panel-gestion-titulo">Añadir Nuevo Alumno</h2>
+                <form id="form-gestion-alumno" novalidate>
+                    <input type="hidden" id="id" name="id">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="apellidos">Apellidos:</label>
+                        <input type="text" id="apellidos" name="apellidos" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad:</label>
+                        <input type="number" id="edad" name="edad" required min="16">
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="direccion">Dirección:</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="localidad">Localidad:</label>
+                        <input type="text" id="localidad" name="localidad" required>
+                        <span class="error-message"></span>
+                    </div>
+                    <button type="submit" id="btn-guardar">Guardar</button>
+                    <button type="button" id="btn-cancelar" class="hidden">Cancelar Edición</button>
+                </form>
+            </section>
+
+            <section id="detalles-alumno" class="panel">
+                <h2>Detalles del Alumno</h2>
+                <div id="detalles-content">
+                    <p>Selecciona un alumno para ver sus detalles.</p>
+                </div>
+
+                <div id="gestion-calificaciones" class="hidden">
+                    <h3>Añadir Calificación</h3>
+                    <form id="form-nueva-calificacion">
+                        <div class="form-group">
+                            <label for="asignatura">Asignatura:</label>
+                            <select id="asignatura" name="asignatura" required>
+                                <option value="">-- Selecciona una asignatura --</option>
+                                <option value="Desarrollo Web en Entorno Cliente">Desarrollo Web en Entorno Cliente</option>
+                                <option value="Desarrollo Web en Entorno Servidor">Desarrollo Web en Entorno Servidor</option>
+                                <option value="Despliegue de Aplicaciones Web">Despliegue de Aplicaciones Web</option>
+                                <option value="Diseño de Interfaces Web">Diseño de Interfaces Web</option>
+                                <option value="Empresa e Iniciativa Emprendedora">Empresa e Iniciativa Emprendedora</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nota">Nota:</label>
+                            <input type="number" id="nota" name="nota" required min="0" max="10" step="0.1">
+                            <span class="error-message"></span>
+                        </div>
+                        <button type="submit">Añadir Nota</button>
+                    </form>
+                </div>
+            </section>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>Examen DWEC - 2025</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/gestionAlumnos.js"></script>
+</body>
+</html>
