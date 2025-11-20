@@ -16,4 +16,4 @@ Se usó **Bootstrap 5** para los estilos.
 4. Los datos se envían por **POST** a `https://webhook.site/` (usando proxy CORS).  
 
 ## 🌐 URL en Netlify
-🔗 [https://serene-longma-d58b90.netlify.app/]
+🔗 [https://dwec-11-01.netlify.app/]

@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#mensaje {
+    font-weight: bold;
+    margin-top: 10px;
+    color: red;
+}
+
+.usuario {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background: #f7f7f7;
+    border-radius: 6px;
+}
+
+.pedido {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fff;
+}

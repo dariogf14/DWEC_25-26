@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Nuevo Producto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Crear Nuevo Producto</h1>
+
+  <form id="form-producto">
+    <label>
+      Nombre:
+      <input type="text" id="nombre" required>
+      <div class="error" id="error-nombre"></div>
+    </label>
+
+    <label>
+      SKU:
+      <input type="text" id="sku" required>
+      <div class="validando" id="estado-sku"></div>
+      <div class="error" id="error-sku"></div>
+    </label>
+
+    <label>
+      Precio:
+      <input type="number" id="precio" required>
+      <div class="error" id="error-precio"></div>
+    </label>
+
+    <label>
+      Stock:
+      <input type="number" id="stock" required>
+      <div class="error" id="error-stock"></div>
+    </label>
+
+    <label>
+      Categoría:
+      <input type="text" id="categoria" required>
+      <div class="error" id="error-categoria"></div>
+    </label>
+
+    <button type="submit" id="guardar" disabled>Guardar</button>
+  </form>
+
+  <div id="mensaje-exito" class="success"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

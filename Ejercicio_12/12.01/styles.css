@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.producto {
+    border: 1px solid #ccc;
+    padding: 12px;
+    margin: 10px;
+    border-radius: 6px;
+    width: 250px;
+    background: #f8f8f8;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.contenedor-productos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+button {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+select {
+    margin-top: 10px;
+    margin-right: 10px;
+}

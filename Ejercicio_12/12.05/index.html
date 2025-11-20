@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panel Completo de Ventas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Panel de Ventas</h1>
+
+  <div id="estado">Cargando datos maestros...</div>
+
+  <label for="select-usuario">Selecciona un usuario:</label>
+  <select id="select-usuario" disabled>
+    <option value="">-- Selecciona un usuario --</option>
+  </select>
+
+  <div id="dashboard-usuario">
+    <div id="info-usuario"></div>
+    <div id="pedidos-usuario"></div>
+    <div id="resumen-usuario"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
