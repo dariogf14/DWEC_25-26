@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.top-controls {
+    margin-bottom: 15px;
+}
+
+.top-controls input {
+    margin-left: 10px;
+    padding: 5px;
+}
+
+form .form-group {
+    margin-bottom: 10px;
+}
+
+form input {
+    padding: 5px;
+    width: 250px;
+}
+
+form button {
+    margin: 5px 5px 5px 0;
+    padding: 5px 10px;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    display: block;
+}
+
+.loading {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.message {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+button.edit-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.grades-btn {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+#gradesForm .form-group {
+    margin-bottom: 10px;
+}
