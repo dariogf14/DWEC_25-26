@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Online DWEC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Cabecera -->
+    <header class="bg-white shadow p-4 flex items-center justify-between">
+        <div class="flex items-center gap-4">
+            <select id="filtro-categoria" class="border rounded p-1">
+                <option value="">Todas las categorías</option>
+            </select>
+            <select id="filtro-marca" class="border rounded p-1">
+                <option value="">Todas las marcas</option>
+            </select>
+            <input type="text" id="busqueda" placeholder="Buscar..." class="border rounded p-1">
+        </div>
+        <div class="flex items-center gap-4">
+            <button id="btn-usuario" class="bg-blue-500 text-white px-3 py-1 rounded">Usuario</button>
+            <button id="btn-carrito" class="bg-green-500 text-white px-3 py-1 rounded">Carrito</button>
+        </div>
+    </header>
+
+    <!-- Cuerpo de productos -->
+    <main class="p-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="catalogo">
+    </main>
+
+    <!-- Detalles de producto -->
+    <div id="modal-detalle" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-6 rounded w-96">
+            <h2 class="text-xl font-bold mb-2">Detalle del Producto</h2>
+            <div id="contenido-detalle">Contenido del producto</div>
+            <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded" onclick="cerrarModal('modal-detalle')">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Carrito -->
+    <div id="modal-carrito" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-6 rounded w-96">
+            <h2 class="text-xl font-bold mb-2">Carrito</h2>
+            <div id="contenido-carrito">Productos del carrito</div>
+            <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded" onclick="cerrarModal('modal-carrito')">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Inicio de sesión -->
+    <div id="modal-login" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-6 rounded w-96">
+            <h2 class="text-xl font-bold mb-2">Iniciar Sesión</h2>
+            <form id="form-login" class="flex flex-col gap-2">
+                <input type="email" placeholder="Email" class="border rounded p-1">
+                <input type="password" placeholder="Contraseña" class="border rounded p-1">
+                <button type="submit" class="bg-blue-500 text-white px-3 py-1 rounded mt-2">Entrar</button>
+            </form>
+            <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded" onclick="cerrarModal('modal-login')">Cerrar</button>
+        </div>
+    </div>
+
+    <!--Edición de perfil -->
+    <div id="modal-perfil" class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center">
+        <div class="bg-white p-6 rounded w-96">
+            <h2 class="text-xl font-bold mb-2">Editar Perfil</h2>
+            <form id="form-perfil" class="flex flex-col gap-2">
+                <input type="text" placeholder="Nombre" class="border rounded p-1">
+                <input type="email" placeholder="Email" class="border rounded p-1">
+                <button type="submit" class="bg-green-500 text-white px-3 py-1 rounded mt-2">Guardar</button>
+            </form>
+            <button class="mt-4 bg-red-500 text-white px-3 py-1 rounded" onclick="cerrarModal('modal-perfil')">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

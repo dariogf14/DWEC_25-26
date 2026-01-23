@@ -1,0 +1,219 @@
+<!--
+====================================================
+ HTML – APUNTES COMPLETOS PARA EXAMEN
+ Archivo de consulta rápida (cheat sheet)
+ Puedes usarlo durante el examen
+====================================================
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Define la codificación de caracteres -->
+    <meta charset="UTF-8">
+
+    <!-- Hace la web responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título que aparece en la pestaña -->
+    <title>Apuntes HTML Examen</title>
+</head>
+<body>
+
+<!--==================================================
+ 1. ESTRUCTURA BÁSICA
+==================================================-->
+
+<!-- html  -> raíz del documento -->
+<!-- head  -> información para el navegador -->
+<!-- body  -> contenido visible -->
+
+
+<!--==================================================
+ 2. ENCABEZADOS
+==================================================-->
+
+<h1>Título principal</h1> <!-- Solo uno por página -->
+<h2>Subtítulo</h2>
+<h3>Título nivel 3</h3>
+<h4>Título nivel 4</h4>
+<h5>Título nivel 5</h5>
+<h6>Título nivel 6</h6>
+
+
+<!--==================================================
+ 3. PÁRRAFOS Y TEXTO
+==================================================-->
+
+<p>Esto es un párrafo</p> <!-- Texto normal -->
+
+<strong>Texto importante</strong> <!-- Negrita semántica -->
+<em>Texto enfatizado</em> <!-- Cursiva semántica -->
+<br> <!-- Salto de línea -->
+<hr> <!-- Línea horizontal -->
+
+
+<!--==================================================
+ 4. ENLACES
+==================================================-->
+
+<!-- Enlace externo -->
+<a href="https://www.google.com">Ir a Google</a>
+
+<!-- Enlace que se abre en nueva pestaña -->
+<a href="https://www.google.com" target="_blank">Google nueva pestaña</a>
+
+<!-- Enlace interno -->
+<a href="contacto.html">Ir a contacto</a>
+
+
+<!--==================================================
+ 5. IMÁGENES
+==================================================-->
+
+<img src="imagen.jpg" alt="Descripción de la imagen">
+<!-- src -> ruta de la imagen -->
+<!-- alt -> texto alternativo (accesibilidad) -->
+
+
+<!--==================================================
+ 6. LISTAS
+==================================================-->
+
+<!-- Lista desordenada -->
+<ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+</ul>
+
+<!-- Lista ordenada -->
+<ol>
+    <li>Primero</li>
+    <li>Segundo</li>
+</ol>
+
+
+<!--==================================================
+ 7. TABLAS
+==================================================-->
+
+<table border="1">
+    <!-- Fila de encabezado -->
+    <tr>
+        <th>Nombre</th>
+        <th>Edad</th>
+    </tr>
+
+    <!-- Fila normal -->
+    <tr>
+        <td>Álvaro</td>
+        <td>25</td>
+    </tr>
+</table>
+
+
+<!--==================================================
+ 8. FORMULARIOS (MUY TÍPICO EN EXÁMENES)
+==================================================-->
+
+<form action="procesar.php" method="post">
+    <!-- Campo de texto -->
+    <input type="text" name="nombre" placeholder="Nombre">
+
+    <!-- Email -->
+    <input type="email" name="email">
+
+    <!-- Contraseña -->
+    <input type="password" name="password">
+
+    <!-- Número -->
+    <input type="number" name="edad">
+
+    <!-- Checkbox -->
+    <input type="checkbox" name="acepto"> Acepto condiciones
+
+    <!-- Radio -->
+    <input type="radio" name="sexo" value="hombre"> Hombre
+    <input type="radio" name="sexo" value="mujer"> Mujer
+
+    <!-- Select -->
+    <select name="pais">
+        <option value="es">España</option>
+        <option value="fr">Francia</option>
+    </select>
+
+    <!-- Área de texto -->
+    <textarea name="mensaje"></textarea>
+
+    <!-- Botón -->
+    <button type="submit">Enviar</button>
+</form>
+
+
+<!--==================================================
+ 9. DIV Y SPAN
+==================================================-->
+
+<div>
+    <!-- Contenedor en bloque -->
+    Contenido del div
+</div>
+
+<span>
+    <!-- Contenedor en línea -->
+    Texto pequeño
+</span>
+
+
+<!--==================================================
+ 10. ETIQUETAS SEMÁNTICAS (IMPORTANTE)
+==================================================-->
+
+<header>Cabecera</header>   <!-- Parte superior -->
+<nav>Menú</nav>             <!-- Navegación -->
+<main>Contenido principal</main>
+<section>Sección</section>
+<article>Artículo</article>
+<aside>Contenido lateral</aside>
+<footer>Pie de página</footer>
+
+
+<!--==================================================
+ 11. ATRIBUTOS IMPORTANTES
+==================================================-->
+
+<!-- id -> único -->
+<div id="principal"></div>
+
+<!-- class -> reutilizable -->
+<div class="caja"></div>
+
+<!-- style -> CSS en línea (NO recomendado) -->
+<p style="color:red;">Texto rojo</p>
+
+
+<!--==================================================
+ 12. CONEXIÓN CON CSS Y JS
+==================================================-->
+
+<!-- CSS externo -->
+<link rel="stylesheet" href="estilos.css">
+
+<!-- JS externo -->
+<script src="script.js"></script>
+
+
+<!--==================================================
+ 13. COMENTARIOS EN HTML
+==================================================-->
+
+<!-- Esto es un comentario y no se muestra -->
+
+
+<!--==================================================
+ FIN DEL ARCHIVO
+ Mucha suerte en el examen 💪
+==================================================-->
+
+</body>
+</html>
