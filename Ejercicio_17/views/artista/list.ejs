@@ -1,0 +1,11 @@
+<h1>Lista de Artistas</h1>
+<div style="display:flex; gap:20px; flex-wrap:wrap;">
+<% artistas.forEach(a => { %>
+<div style="text-align:center">
+<a href="/artistas/<%= a.id %>">
+<img src="<%= a.foto %>" width="120"><br>
+<strong><%= a.nombre %></strong>
+</a>
+</div>
+<% }) %>
+</div>

@@ -1,0 +1,23 @@
+<h1>Lista de Álbumes</h1>
+<a href="/albumes/form">Añadir Nuevo Álbum</a>
+<table border="1">
+<tr>
+<th>Foto</th>
+<th>Título</th>
+<th>Artista</th>
+<th>Año</th>
+<th>Acciones</th>
+</tr>
+<% albumes.forEach(album => { %>
+<tr>
+<td><img src="<%= album.foto %>" width="60"></td>
+<td><%= album.titulo %></td>
+<td><%= album.artista.nombre %></td>
+<td><%= album.anio %></td>
+<td>
+<a href="/albumes/form/<%= album.id %>">Editar</a> |
+<a href="/albumes/delete/<%= album.id %>">Eliminar</a>
+</td>
+</tr>
+<% }) %>
+</table>
