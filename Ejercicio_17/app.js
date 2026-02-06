@@ -1,5 +1,5 @@
 const express = require('express');
-const morgan = require('morgan');
+// const morgan = require('morgan');
 const fs = require('fs');
 const path = require('path');
 
@@ -11,7 +11,7 @@ const accessLogStream = fs.createWriteStream(
     path.join(__dirname, 'access.log'),
     { flags: 'a' }
 );
-app.use(morgan('combined', { stream: accessLogStream }));
+// app.use(morgan('combined', { stream: accessLogStream }));
 
 
 app.use(express.urlencoded({ extended: true }));
@@ -33,3 +33,13 @@ app.get('/', (req, res) => {
 app.listen(3000, () => {
     console.log('Servidor en http://localhost:3000');
 });
+
+const PORT = process.env.PORT || 3000;
+
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(PORT, () => {
+    console.log(`Servidor en puerto ${PORT}`);
+  });
+}
+
+module.exports = app;

@@ -11,3 +11,5 @@
 ::1 - - [03/Feb/2026:10:30:57 +0000] "GET /artistas/6 HTTP/1.1" 200 695 "http://localhost:3000/artistas" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
 ::1 - - [03/Feb/2026:10:31:06 +0000] "GET /artistas/3 HTTP/1.1" 200 708 "http://localhost:3000/artistas" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
 ::1 - - [03/Feb/2026:10:31:27 +0000] "GET /albumes HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+::1 - - [03/Feb/2026:11:25:20 +0000] "GET / HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
+::1 - - [03/Feb/2026:11:25:21 +0000] "GET /albumes HTTP/1.1" 304 - "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36 Edg/144.0.0.0"
