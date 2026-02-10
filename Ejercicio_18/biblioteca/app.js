@@ -20,8 +20,8 @@ app.use(morgan("combined", { stream: accessLogStream }));
 app.use(morgan("dev"));
 
 app.use("/", require("./routes/index.routes"));
-app.use("/", require("./routes/libro.routes"));
-app.use("/", require("./routes/prestamo.routes"));
+// app.use("/", require("./routes/libro.routes"));
+// app.use("/", require("./routes/prestamo.routes"));
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Servidor en http://localhost:${PORT}`));
