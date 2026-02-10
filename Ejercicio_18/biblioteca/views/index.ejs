@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Catálogo</title>
+</head>
+<body>
+  <h1>Catálogo</h1>
+  <p><a href="/prestados">Ver prestados</a> | <a href="/vencidos">Ver vencidos</a></p>
+
+  <table>
+    <thead><tr><th>Título</th><th>Autor</th><th>Estado</th></tr></thead>
+    <tbody>
+      <% libros.forEach(l => { %>
+        <tr>
+          <td><a href="/libro/<%= l.id %>"><%= l.titulo %></a></td>
+          <td><%= l.autor %></td>
+          <td><%= l.estado %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Vencidos</title>
+</head>
+<body>
+  <h1>Libros vencidos</h1>
+  <p><a href="/">Volver</a></p>
+
+  <table>
+    <thead><tr><th>Título</th><th>Autor</th><th>Prestatario</th><th>Vencía</th></tr></thead>
+    <tbody>
+      <% rows.forEach(r => { %>
+        <tr>
+          <td><a href="/libro/<%= r.id %>"><%= r.titulo %></a></td>
+          <td><%= r.autor %></td>
+          <td><%= r.nombre_prestatario %></td>
+          <td><%= r.fecha_devolucion.toISOString().slice(0,10) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
