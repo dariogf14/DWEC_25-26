@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title><%= libro.titulo %></title>
+</head>
+<body>
+  <p>
+    <a href="/">⬅ Volver al catálogo</a> |
+    <a href="/prestados">Prestados</a> |
+    <a href="/vencidos">Vencidos</a>
+  </p>
+
+  <h1><%= libro.titulo %></h1>
+
+  <ul>
+    <li><strong>Autor:</strong> <%= libro.autor %></li>
+    <li><strong>ISBN:</strong> <%= libro.isbn || "-" %></li>
+    <li><strong>Estado:</strong> <%= libro.estado %></li>
+  </ul>
+
+  <hr/>
+
+  <h2>Acciones</h2>
+
+  <% if (libro.estado === "Disponible") { %>
+    <p>El libro está disponible.</p>
+    <a class="btn" href="/prestamo/formulario/<%= libro.id %>">Prestar Libro</a>
+  <% } else { %>
+    <p>📌 El libro está prestado.</p>
+
+    <% if (prestamoActivo) { %>
+      <p><strong>Prestado a:</strong> <%= prestamoActivo.nombre_prestatario %></p>
+      <p><strong>Vence:</strong> <%= prestamoActivo.fecha_devolucion.toISOString().slice(0,10) %></p>
+
+      <form method="POST" action="/prestamo/devolver/<%= libro.id %>">
+        <button class="btn" type="submit">Registrar Devolución</button>
+      </form>
+    <% } else { %>
+      <p style="color:#b00"><strong>Ojo:</strong> Estado “Prestado” pero no hay préstamo activo (datos inconsistentes).</p>
+    <% } %>
+  <% } %>
+
+  <hr/>
+
+  <h2>Historial de préstamos</h2>
+
+  <% if (historial.length === 0) { %>
+    <p>No hay préstamos registrados para este libro.</p>
+  <% } else { %>
+    <table>
+      <thead>
+        <tr>
+          <th>Prestatario</th>
+          <th>Fecha préstamo</th>
+          <th>Fecha devolución</th>
+          <th>Fecha entrega</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% historial.forEach(h => { %>
+          <tr>
+            <td><%= h.nombre_prestatario %></td>
+            <td><%= h.fecha_prestamo.toISOString().slice(0,10) %></td>
+            <td><%= h.fecha_devolucion.toISOString().slice(0,10) %></td>
+            <td>
+              <% if (h.fecha_entrega) { %>
+                <%= h.fecha_entrega.toISOString().slice(0,10) %>
+              <% } else { %>
+                <em>En curso</em>
+              <% } %>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="/styles.css" />
+  <title>Préstamos de <%= nombre %></title>
+</head>
+<body>
+  <p><a href="/prestados">⬅ Volver</a></p>
+
+  <h1>Libros prestados a: <%= nombre %></h1>
+
+  <% if (rows.length === 0) { %>
+    <p>No tiene préstamos activos.</p>
+  <% } else { %>
+    <table>
+      <thead><tr><th>Título</th><th>Autor</th><th>Devolución</th></tr></thead>
+      <tbody>
+        <% rows.forEach(r => { %>
+          <tr>
+            <td><a href="/libro/<%= r.id %>"><%= r.titulo %></a></td>
+            <td><%= r.autor %></td>
+            <td><%= r.fecha_devolucion.toISOString().slice(0,10) %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</body>
+</html>
