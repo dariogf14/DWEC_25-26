@@ -1,0 +1,46 @@
+<h1>Dashboard for <%= user.username %></h1>
+
+<h2>Edit Your Profile</h2>
+<form method="POST" action="/dashboard/profile">
+  <label>Email:</label><input name="email" value="<%= user.email %>" required />
+  <label>Bio:</label><textarea name="bio"><%= user.bio || "" %></textarea>
+  <label>Photo URL:</label><input name="photo" value="<%= user.photo || "" %>" />
+  <button type="submit">Update Profile</button>
+</form>
+
+<h2>Manage Social Links</h2>
+<ul>
+  <% links.forEach(l => { %>
+    <li>
+      <%= l.platform %>: <%= l.url %>
+      <form style="display:inline" method="POST" action="/dashboard/social-links/<%= l.id %>/delete">
+        <button type="submit">Delete</button>
+      </form>
+    </li>
+  <% }) %>
+</ul>
+
+<form method="POST" action="/dashboard/social-links">
+  <input name="platform" placeholder="Platform (e.g. GitHub)" required />
+  <input name="url" placeholder="URL" required />
+  <button type="submit">Add Link</button>
+</form>
+
+<h2>Manage Projects</h2>
+<% projects.forEach(p => { %>
+  <div>
+    <b><%= p.title %></b>
+    <form style="display:inline" method="POST" action="/dashboard/projects/<%= p.id %>/delete">
+      <button type="submit">Delete</button>
+    </form>
+    <a href="/dashboard/projects/<%= p.id %>/edit">Edit</a>
+  </div>
+<% }) %>
+
+<form method="POST" action="/dashboard/projects">
+  <input name="title" placeholder="Project Title" required />
+  <textarea name="description" placeholder="Project Description"></textarea>
+  <input name="repo_url" placeholder="Repo URL" />
+  <input name="live_url" placeholder="Live Demo URL" />
+  <button type="submit">Add Project</button>
+</form>
