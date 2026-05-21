@@ -1,0 +1,44 @@
+GET /
+GET /api/autores
+GET /api/autores?nacionalidad=Española
+GET /api/autores/GGM
+GET /api/autores/GGM/libros
+POST /api/autores
+Body JSON:
+{
+  "referencia": "TEST",
+  "nombre": "Autor Test",
+  "nacionalidad": "Española",
+  "fechaNacimiento": "1990-01-01",
+  "imagenUrl": "https://randomuser.me/api/portraits/men/10.jpg"
+}
+
+PUT /api/autores/TEST
+Body JSON:
+{
+  "nacionalidad": "Argentina"
+}
+
+DELETE /api/autores/TEST
+
+GET /api/libros
+GET /api/libros?sort=titulo
+GET /api/libros/1984
+POST /api/libros
+Body JSON:
+{
+  "referencia": "LIBROTEST",
+  "titulo": "Libro Test",
+  "genero": "Pruebas",
+  "anyoPublicacion": 2026,
+  "autor": "GGM",
+  "imagenUrl": "https://picsum.photos/id/30/200/300"
+}
+
+PUT /api/libros/LIBROTEST
+Body JSON:
+{
+  "genero": "Ciencia Ficción"
+}
+
+DELETE /api/libros/LIBROTEST

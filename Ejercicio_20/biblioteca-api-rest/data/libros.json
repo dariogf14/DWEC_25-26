@@ -1,0 +1,162 @@
+[
+  {
+    "referencia": "CIENANOSDESOLEDAD",
+    "titulo": "Cien años de soledad",
+    "genero": "Realismo Mágico",
+    "anyoPublicacion": 1967,
+    "autor": "GGM",
+    "imagenUrl": "https://picsum.photos/id/10/200/300"
+  },
+  {
+    "referencia": "ELAMORENLOSTIEMPOSDELCOLERA",
+    "titulo": "El amor en los tiempos del cólera",
+    "genero": "Ficción Romántica",
+    "anyoPublicacion": 1985,
+    "autor": "GGM",
+    "imagenUrl": "https://picsum.photos/id/11/200/300"
+  },
+  {
+    "referencia": "LASOMBRADELVIENTO",
+    "titulo": "La sombra del viento",
+    "genero": "Misterio",
+    "anyoPublicacion": 2001,
+    "autor": "CRZ",
+    "imagenUrl": "https://picsum.photos/id/12/200/300"
+  },
+  {
+    "referencia": "ELJUEGODELANGEL",
+    "titulo": "El juego del ángel",
+    "genero": "Misterio",
+    "anyoPublicacion": 2008,
+    "autor": "CRZ",
+    "imagenUrl": "https://picsum.photos/id/13/200/300"
+  },
+  {
+    "referencia": "1984",
+    "titulo": "1984",
+    "genero": "Distopía",
+    "anyoPublicacion": 1949,
+    "autor": "GO",
+    "imagenUrl": "https://picsum.photos/id/14/200/300"
+  },
+  {
+    "referencia": "REBELIONENLAGRANJA",
+    "titulo": "Rebelión en la granja",
+    "genero": "Sátira Política",
+    "anyoPublicacion": 1945,
+    "autor": "GO",
+    "imagenUrl": "https://picsum.photos/id/15/200/300"
+  },
+  {
+    "referencia": "DONQUIJOTEDELAMANCHA",
+    "titulo": "Don Quijote de la Mancha",
+    "genero": "Clásico",
+    "anyoPublicacion": 1605,
+    "autor": "MDC",
+    "imagenUrl": "https://picsum.photos/id/16/200/300"
+  },
+  {
+    "referencia": "ELALQUIMISTA",
+    "titulo": "El alquimista",
+    "genero": "Ficción Espiritual",
+    "anyoPublicacion": 1988,
+    "autor": "JS",
+    "imagenUrl": "https://picsum.photos/id/17/200/300"
+  },
+  {
+    "referencia": "CRONICADEUNAMUERTEANUNCIADA",
+    "titulo": "Crónica de una muerte anunciada",
+    "genero": "Novela Negra",
+    "anyoPublicacion": 1981,
+    "autor": "GGM",
+    "imagenUrl": "https://picsum.photos/id/18/200/300"
+  },
+  {
+    "referencia": "MARINA",
+    "titulo": "Marina",
+    "genero": "Misterio",
+    "anyoPublicacion": 1999,
+    "autor": "CRZ",
+    "imagenUrl": "https://picsum.photos/id/19/200/300"
+  },
+  {
+    "referencia": "UNMUNDOFELIZ",
+    "titulo": "Un mundo feliz",
+    "genero": "Distopía",
+    "anyoPublicacion": 1932,
+    "autor": "MDC",
+    "imagenUrl": "https://picsum.photos/id/20/200/300"
+  },
+  {
+    "referencia": "ENSAYOSOBRELACEGUERA",
+    "titulo": "Ensayo sobre la ceguera",
+    "genero": "Ficción Filosófica",
+    "anyoPublicacion": 1995,
+    "autor": "JS",
+    "imagenUrl": "https://picsum.photos/id/21/200/300"
+  },
+  {
+    "referencia": "LACASADELOSESPIRITUS",
+    "titulo": "La casa de los espíritus",
+    "genero": "Realismo Mágico",
+    "anyoPublicacion": 1982,
+    "autor": "IA",
+    "imagenUrl": "https://picsum.photos/id/22/200/300"
+  },
+  {
+    "referencia": "PAULA",
+    "titulo": "Paula",
+    "genero": "Autobiografía",
+    "anyoPublicacion": 1994,
+    "autor": "IA",
+    "imagenUrl": "https://picsum.photos/id/23/200/300"
+  },
+  {
+    "referencia": "ELPRINCIPITO",
+    "titulo": "El principito",
+    "genero": "Fábula",
+    "anyoPublicacion": 1943,
+    "autor": "ASE",
+    "imagenUrl": "https://picsum.photos/id/24/200/300"
+  },
+  {
+    "referencia": "VOLVERAEMPEZARBIGLITTLELIES",
+    "titulo": "Volver a empezar (Big Little Lies)",
+    "genero": "Misterio",
+    "anyoPublicacion": 2014,
+    "autor": "LM",
+    "imagenUrl": "https://picsum.photos/id/25/200/300"
+  },
+  {
+    "referencia": "LOSHOMBRESQUENOAMABANLASMUJERES",
+    "titulo": "Los hombres que no amaban a las mujeres",
+    "genero": "Thriller",
+    "anyoPublicacion": 2005,
+    "autor": "SL",
+    "imagenUrl": "https://picsum.photos/id/26/200/300"
+  },
+  {
+    "referencia": "20000LEGUASDEVIAJESUBMARINO",
+    "titulo": "20.000 leguas de viaje submarino",
+    "genero": "Aventura",
+    "anyoPublicacion": 1870,
+    "autor": "JV",
+    "imagenUrl": "https://picsum.photos/id/27/200/300"
+  },
+  {
+    "referencia": "VIAJEALCENTRODELATIERRA",
+    "titulo": "Viaje al centro de la Tierra",
+    "genero": "Aventura",
+    "anyoPublicacion": 1864,
+    "autor": "JV",
+    "imagenUrl": "https://picsum.photos/id/28/200/300"
+  },
+  {
+    "referencia": "ELCONDEDEMONTECRISTO",
+    "titulo": "El conde de Montecristo",
+    "genero": "Clásico",
+    "anyoPublicacion": 1844,
+    "autor": "AD",
+    "imagenUrl": "https://picsum.photos/id/29/200/300"
+  }
+]

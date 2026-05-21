@@ -1,0 +1,21 @@
+{
+  "name": "biblioteca-api-rest",
+  "version": "1.0.0",
+  "description": "API REST de biblioteca con Express y MongoDB Atlas",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js",
+    "seed": "node scripts/seed.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "20.x"
+  },
+  "license": "ISC"
+}

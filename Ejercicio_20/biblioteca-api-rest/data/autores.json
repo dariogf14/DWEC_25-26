@@ -1,0 +1,79 @@
+[
+  {
+    "referencia": "GGM",
+    "nombre": "Gabriel García Márquez",
+    "nacionalidad": "Colombiana",
+    "fechaNacimiento": "1927-03-06",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/1.jpg"
+  },
+  {
+    "referencia": "CRZ",
+    "nombre": "Carlos Ruiz Zafón",
+    "nacionalidad": "Española",
+    "fechaNacimiento": "1964-09-25",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/2.jpg"
+  },
+  {
+    "referencia": "GO",
+    "nombre": "George Orwell",
+    "nacionalidad": "Británica",
+    "fechaNacimiento": "1903-06-25",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/3.jpg"
+  },
+  {
+    "referencia": "MDC",
+    "nombre": "Miguel de Cervantes",
+    "nacionalidad": "Española",
+    "fechaNacimiento": "1547-09-29",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/4.jpg"
+  },
+  {
+    "referencia": "JS",
+    "nombre": "José Saramago",
+    "nacionalidad": "Portuguesa",
+    "fechaNacimiento": "1922-11-16",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/5.jpg"
+  },
+  {
+    "referencia": "IA",
+    "nombre": "Isabel Allende",
+    "nacionalidad": "Chilena",
+    "fechaNacimiento": "1942-08-02",
+    "imagenUrl": "https://randomuser.me/api/portraits/women/1.jpg"
+  },
+  {
+    "referencia": "ASE",
+    "nombre": "Antoine de Saint-Exupéry",
+    "nacionalidad": "Francesa",
+    "fechaNacimiento": "1900-06-29",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/6.jpg"
+  },
+  {
+    "referencia": "LM",
+    "nombre": "Liane Moriarty",
+    "nacionalidad": "Australiana",
+    "fechaNacimiento": "1966-11-15",
+    "imagenUrl": "https://randomuser.me/api/portraits/women/2.jpg"
+  },
+  {
+    "referencia": "SL",
+    "nombre": "Stieg Larsson",
+    "nacionalidad": "Sueca",
+    "fechaNacimiento": "1954-08-15",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/7.jpg"
+  },
+  {
+    "referencia": "JV",
+    "nombre": "Julio Verne",
+    "nacionalidad": "Francesa",
+    "fechaNacimiento": "1828-02-08",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/8.jpg"
+  },
+  {
+    "referencia": "AD",
+    "nombre": "Alexandre Dumas",
+    "nacionalidad": "Francesa",
+    "fechaNacimiento": "1802-07-24",
+    "imagenUrl": "https://randomuser.me/api/portraits/men/9.jpg"
+  }
+]
