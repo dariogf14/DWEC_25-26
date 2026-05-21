@@ -1,4 +1,4 @@
-const { PutObjectCommand, DeleteObjectCommand } = require('@aws-sdk/client-s3');
+const { PutObjectCommand, DeleteObjectCommand, GetObjectCommand } = require('@aws-sdk/client-s3');
 const { v4: uuidv4 } = require('uuid');
 const path = require('path');
 const s3 = require('../config/s3');
@@ -37,9 +37,30 @@ async function deleteImage(fileName) {
   }));
 }
 
-function getPublicImageUrl(fileName) {
-  if (!fileName) return '/img/placeholder.svg';
-  return `${process.env.AWS_ENDPOINT || 'https://s3.filebase.com'}/${bucketName}/${fileName}`;
+async function getImage(fileName) {
+  if (!fileName || !bucketName) {
+    return null;
+  }
+
+  const response = await s3.send(new GetObjectCommand({
+    Bucket: bucketName,
+    Key: fileName
+  }));
+
+  return response;
 }
 
-module.exports = { uploadImage, deleteImage, getPublicImageUrl };
+function getPublicImageUrl(fileName) {
+  if (!fileName) {
+    return '/img/placeholder.svg';
+  }
+
+  return `/imagen/${fileName}`;
+}
+
+module.exports = {
+  uploadImage,
+  deleteImage,
+  getImage,
+  getPublicImageUrl
+};

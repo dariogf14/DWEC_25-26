@@ -18,5 +18,6 @@ const upload = multer({
 router.get('/', alumnoController.index);
 router.post('/alumnos', upload.single('imagen'), alumnoController.create);
 router.post('/alumnos/delete/:id', alumnoController.remove);
+router.get('/imagen/:fileName', alumnoController.showImage);
 
 module.exports = router;

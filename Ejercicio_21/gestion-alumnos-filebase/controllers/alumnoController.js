@@ -67,4 +67,26 @@ function renderError(res, error) {
   });
 }
 
-module.exports = { index, create, remove };
+async function showImage(req, res) {
+  try {
+    const fileName = req.params.fileName;
+    const image = await filebaseService.getImage(fileName);
+
+    if (!image || !image.Body) {
+      return res.status(404).send('Imagen no encontrada');
+    }
+
+    res.setHeader('Content-Type', image.ContentType || 'image/jpeg');
+    image.Body.pipe(res);
+  } catch (error) {
+    console.error(error);
+    res.status(404).send('Imagen no encontrada');
+  }
+}
+
+module.exports = {
+  index,
+  create,
+  remove,
+  showImage
+};
