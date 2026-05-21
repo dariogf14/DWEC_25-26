@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <h1>Prestar Libro</h1>
+  <p><strong><%= libro.titulo %></strong> — <%= libro.autor %></p>
+</section>
+
+<% if (error) { %>
+  <div class="error-box"><%= error %></div>
+<% } %>
+
+<form class="form-card" method="POST" action="/prestamo/nuevo">
+  <input type="hidden" name="libro_id" value="<%= libro.id %>">
+
+  <label>
+    Nombre del prestatario:
+    <input type="text" name="nombre_prestatario" value="<%= datos.nombre_prestatario || '' %>" required>
+  </label>
+
+  <label>
+    Fecha de préstamo:
+    <input type="date" name="fecha_prestamo" value="<%= datos.fecha_prestamo || '' %>" required>
+  </label>
+
+  <label>
+    Fecha de devolución:
+    <input type="date" name="fecha_devolucion" value="<%= datos.fecha_devolucion || '' %>" required>
+  </label>
+
+  <div class="form-actions">
+    <button class="btn" type="submit">Guardar préstamo</button>
+    <a class="btn secondary" href="/libro/<%= libro.id %>">Cancelar</a>
+  </div>
+</form>
+
+<%- include('partials/footer') %>

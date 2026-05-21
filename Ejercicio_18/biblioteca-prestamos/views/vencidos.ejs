@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <h1>Libros Vencidos</h1>
+  <p>Libros cuya fecha de devolución ya ha pasado y aún no se han entregado.</p>
+</section>
+
+<% if (libros.length === 0) { %>
+  <div class="empty">No hay préstamos vencidos actualmente.</div>
+<% } else { %>
+  <table class="data-table danger-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Prestatario</th>
+        <th>Fecha préstamo</th>
+        <th>Fecha devolución</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% libros.forEach(item => { %>
+        <tr>
+          <td><a class="title-link" href="/libro/<%= item.libro_id %>"><%= item.titulo %></a></td>
+          <td><%= item.autor %></td>
+          <td><%= item.nombre_prestatario %></td>
+          <td><%= formatDate(item.fecha_prestamo) %></td>
+          <td><%= formatDate(item.fecha_devolucion) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+<%- include('partials/footer') %>

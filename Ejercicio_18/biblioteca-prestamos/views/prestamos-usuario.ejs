@@ -1,0 +1,31 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <h1>Libros prestados a: <%= nombre %></h1>
+  <p>Préstamos activos del usuario seleccionado.</p>
+</section>
+
+<% if (prestamos.length === 0) { %>
+  <div class="empty">Este usuario no tiene préstamos activos.</div>
+<% } else { %>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Título</th>
+        <th>Autor</th>
+        <th>Fecha devolución</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% prestamos.forEach(item => { %>
+        <tr>
+          <td><a class="title-link" href="/libro/<%= item.libro_id %>"><%= item.titulo %></a></td>
+          <td><%= item.autor %></td>
+          <td><%= formatDate(item.fecha_devolucion) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+
+<section class="detail-card">
+  <div>
+    <h1><%= libro.titulo %></h1>
+    <p><strong>Autor:</strong> <%= libro.autor %></p>
+    <p><strong>ISBN:</strong> <%= libro.isbn %></p>
+    <p>
+      <strong>Estado:</strong>
+      <span class="badge <%= libro.estado === 'Disponible' ? 'success' : 'warning' %>">
+        <%= libro.estado %>
+      </span>
+    </p>
+  </div>
+
+  <div class="action-panel">
+    <% if (libro.estado === 'Disponible') { %>
+      <a class="btn" href="/prestamo/formulario/<%= libro.id %>">Prestar Libro</a>
+    <% } else if (prestamoActivo) { %>
+      <h2>Préstamo activo</h2>
+      <p><strong>Prestatario:</strong> <%= prestamoActivo.nombre_prestatario %></p>
+      <p><strong>Fecha préstamo:</strong> <%= formatDate(prestamoActivo.fecha_prestamo) %></p>
+      <p><strong>Vence:</strong> <%= formatDate(prestamoActivo.fecha_devolucion) %></p>
+      <a class="btn danger" href="/prestamo/devolver/<%= libro.id %>" onclick="return confirm('¿Registrar la devolución de este libro?')">
+        Registrar Devolución
+      </a>
+    <% } %>
+  </div>
+</section>
+
+<h2>Historial de Préstamos</h2>
+
+<% if (historial.length === 0) { %>
+  <div class="empty">Este libro todavía no tiene historial de préstamos.</div>
+<% } else { %>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Prestatario</th>
+        <th>Fecha préstamo</th>
+        <th>Fecha devolución</th>
+        <th>Fecha entrega</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% historial.forEach(item => { %>
+        <tr>
+          <td><%= item.nombre_prestatario %></td>
+          <td><%= formatDate(item.fecha_prestamo) %></td>
+          <td><%= formatDate(item.fecha_devolucion) %></td>
+          <td><%= formatDate(item.fecha_entrega) %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+<%- include('partials/footer') %>

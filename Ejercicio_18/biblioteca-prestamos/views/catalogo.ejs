@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<section class="page-header">
+  <h1>Catálogo de Biblioteca</h1>
+  <p>Listado completo de libros registrados en la biblioteca.</p>
+</section>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Título</th>
+      <th>Autor</th>
+      <th>ISBN</th>
+      <th>Estado</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% libros.forEach(libro => { %>
+      <tr>
+        <td>
+          <a class="title-link" href="/libro/<%= libro.id %>"><%= libro.titulo %></a>
+        </td>
+        <td><%= libro.autor %></td>
+        <td><%= libro.isbn %></td>
+        <td>
+          <span class="badge <%= libro.estado === 'Disponible' ? 'success' : 'warning' %>">
+            <%= libro.estado %>
+          </span>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>
