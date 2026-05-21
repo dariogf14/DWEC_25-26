@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS alumnos_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+USE alumnos_db;
+
+CREATE TABLE IF NOT EXISTS alumno (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nombre VARCHAR(100) NOT NULL,
+  apellidos VARCHAR(100) NOT NULL,
+  localidad VARCHAR(100),
+  imagen VARCHAR(255)
+);

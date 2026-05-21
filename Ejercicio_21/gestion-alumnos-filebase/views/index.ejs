@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Registro de Alumnos</h1>
+
+    <% if (error) { %>
+      <div class="error"><%= error %></div>
+    <% } %>
+
+    <section class="form-card">
+      <form action="/alumnos" method="POST" enctype="multipart/form-data">
+        <label>Nombre:
+          <input type="text" name="nombre" required>
+        </label>
+
+        <label>Apellidos:
+          <input type="text" name="apellidos" required>
+        </label>
+
+        <label>Localidad:
+          <input type="text" name="localidad">
+        </label>
+
+        <label>Imagen:
+          <input type="file" name="imagen" accept="image/*">
+        </label>
+
+        <button type="submit">Agregar Alumno</button>
+      </form>
+    </section>
+
+    <hr>
+
+    <h2>Fichas de Alumnos</h2>
+
+    <% if (alumnos.length === 0) { %>
+      <p class="empty">Todavía no hay alumnos registrados.</p>
+    <% } else { %>
+      <section class="cards">
+        <% alumnos.forEach(alumno => { %>
+          <article class="student-card">
+            <img src="<%= getPublicImageUrl(alumno.imagen) %>" alt="<%= alumno.nombre %> <%= alumno.apellidos %>">
+            <h3><%= alumno.nombre %> <%= alumno.apellidos %></h3>
+            <p><strong>ID:</strong> <%= alumno.id %></p>
+            <p><strong>Localidad:</strong> <%= alumno.localidad || '-' %></p>
+
+            <form action="/alumnos/delete/<%= alumno.id %>" method="POST" onsubmit="return confirm('¿Eliminar este alumno y su imagen?')">
+              <button class="delete-btn" type="submit">Eliminar Alumno</button>
+            </form>
+          </article>
+        <% }) %>
+      </section>
+    <% } %>
+  </main>
+</body>
+</html>
