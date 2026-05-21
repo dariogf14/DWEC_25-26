@@ -1,0 +1,66 @@
+[
+  {
+    "id": "p1",
+    "nombre": "Portátil Lenovo IdeaPad",
+    "precio": 699.99,
+    "stock": 8,
+    "categoria": "Informática",
+    "sku": "LEN-IP-001"
+  },
+  {
+    "id": "p2",
+    "nombre": "Ratón Logitech M185",
+    "precio": 14.99,
+    "stock": 35,
+    "categoria": "Accesorios",
+    "sku": "LOG-M185"
+  },
+  {
+    "id": "p3",
+    "nombre": "Teclado Mecánico Krom",
+    "precio": 49.95,
+    "stock": 15,
+    "categoria": "Accesorios",
+    "sku": "KROM-TK-01"
+  },
+  {
+    "id": "p4",
+    "nombre": "Monitor Samsung 24 pulgadas",
+    "precio": 129.99,
+    "stock": 10,
+    "categoria": "Monitores",
+    "sku": "SAM-MON-24"
+  },
+  {
+    "id": "p5",
+    "nombre": "Disco SSD Kingston 1TB",
+    "precio": 74.5,
+    "stock": 22,
+    "categoria": "Almacenamiento",
+    "sku": "KIN-SSD-1TB"
+  },
+  {
+    "id": "p6",
+    "nombre": "Auriculares HyperX Cloud",
+    "precio": 59.99,
+    "stock": 12,
+    "categoria": "Audio",
+    "sku": "HYP-CLOUD"
+  },
+  {
+    "id": "p7",
+    "nombre": "Webcam Full HD",
+    "precio": 39.99,
+    "stock": 18,
+    "categoria": "Accesorios",
+    "sku": "WEB-FHD-01"
+  },
+  {
+    "id": "p8",
+    "nombre": "Tablet Samsung Galaxy Tab",
+    "precio": 229.0,
+    "stock": 7,
+    "categoria": "Informática",
+    "sku": "SAM-TAB-01"
+  }
+]

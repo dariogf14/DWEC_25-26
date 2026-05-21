@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ejercicio 14.04</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Ejercicio 14.04 - Catálogo offline con IndexedDB</h1>
+  </header>
+
+  <main>
+    <section class="controls">
+      <select id="categoriaSelect">
+        <option value="Todas">Todas</option>
+      </select>
+      <button id="ordenAsc">Ordenar de Menor a Mayor Precio</button>
+      <button id="ordenDesc">Ordenar de Mayor a Menor Precio</button>
+      <button id="forzarActualizacion" class="secondary">Forzar Actualización de Catálogo</button>
+    </section>
+
+    <div id="mensaje" class="message">Cargando...</div>
+    <section id="productos" class="product-grid"></section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
