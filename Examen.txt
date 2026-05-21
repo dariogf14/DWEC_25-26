@@ -1,0 +1,30 @@
+0.Descripción general
+El objetivo de este examen es desarrollar una aplicación web completa utilizando Next.js o Node.js (a tu elección) denominada "MisSeries". 
+Esta plataforma permite a los usuarios gestionar un catálogo de series de television mediante la consulta a la API pública de TVMaze y la persistencia de datos en una base de datos MySQL.
+Los usuarios podrán registrarse, iniciar serión, explorar un catálogo,, filtrar contenido y gestionar su propia lista personal de seguimiento con valoraciones y comentarios.
+
+1. Mapeo de Datos (API TVMaze -> Tabla series)
+para el proceso "Poblar Catálogo", se debe realizar un fetch a la api de TVMaze https://api.tvmaze.com/search/shows?q=comedy y mapear los campos recibidos a la tabla series de la base de datos:
+
+(tabla:)
+Campo MySQL : tvmaze_id // title // release_year // platform // image_url // api_score
+Ruta JSON TVMaze (item.show) : .id // .name // .premiered // .network.name o .webChannel.name // .image.medium // .score (a nivel de item)
+Notas para el alumno : Identificador único de la serie en la API. // Nombre de la serie. // Extraer solamente el año: new Date(premiered).getFullYear(). // Puede estar en una de las dos claves: Usar network?.name || webChannel?.name || 'N/A'. // URL de la carátula de la serie. // Multiplicar por 10 para normalizar (escala 0-10).
+
+2.Desarrollo
+Paso 1: Preparación y Ingesta
+-Base de datos: Importar y ejecutar en el servidor MySql de RDDS de AWS el script SQL adjunto.
+-Funcionalidad: Implementar un botón de "Poblar Catálogo" en la página principal que inserte las series en la tabla series. Una vez cargadas, debajo solamente se mostrará su título.
+-Requisito técnico: Evitar duplicidad de los datos si el botón se pulsa dos veces. Datos ya cargados: (imagen con el botón "Poblar Catálogo" y un mensaje de "¡Éxito! Se han procesado 10 series.")
+
+Paso 2: Gestión de Identidad
+-Sing Up (Registrarse): Formulario paa registrar nombre y email. Gestionar error si el email ya existe.
+-Sing In (Iniciar Sesión): Formulario para iniciar sesión mediante email.
+
+Paso 3: Catálogo Local (Página Principal)
+-Vista Anónima: Solo títulos de series.
+-Vista Privada (Logueado): Fichas completas, filtros avanzados (título, nota mínima) y ordenación (título, valoración, recientes, antiguas). Botón de "Añadir a mi lista".
+
+Paso 4: Gestión de Lista Personal (CRUD & API REST)
+-Crear API REST pripia mediante: POST, GET, PATCH, DELETE en /api/user-series.
+-Interfaz: Página Mi Lista Personal con formulario y botón explícito de "Guardar Cambios" para las valoraciones y botón de borrado para cada serie. 
