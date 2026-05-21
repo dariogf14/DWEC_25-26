@@ -1,0 +1,26 @@
+{
+  "name": "discoteca-virtual",
+  "version": "1.0.0",
+  "description": "Práctica Express MVC - Gestión de una discoteca virtual",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "mvc",
+    "vercel"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0"
+  },
+  "engines": {
+    "node": "20.x"
+  }
+}

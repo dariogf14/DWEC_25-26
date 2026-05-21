@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+  <h1>Lista de Artistas</h1>
+  <a class="btn" href="/artista/form">Añadir Nuevo Artista</a>
+</div>
+
+<section class="artist-grid">
+  <% artistas.forEach(artista => { %>
+    <article class="artist-card">
+      <a class="artist-main-link" href="/artista/<%= artista.id %>">
+        <img class="artist-img" src="<%= artista.foto || '/img/placeholder.svg' %>" alt="<%= artista.nombre %>">
+        <h2><%= artista.nombre %></h2>
+      </a>
+
+      <div class="artist-actions">
+        <a href="/artista/form/<%= artista.id %>">Editar</a>
+        <a class="danger-link" href="/artista/delete/<%= artista.id %>" onclick="return confirm('¿Eliminar este artista y sus álbumes?')">Eliminar</a>
+      </div>
+    </article>
+  <% }) %>
+</section>
+
+<%- include('partials/footer') %>

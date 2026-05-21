@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<h1><%= artista.id ? 'Editar Artista' : 'Añadir Nuevo Artista' %></h1>
+
+<% if (error) { %>
+  <div class="error-box"><%= error %></div>
+<% } %>
+
+<form class="form-card" action="/artista/save" method="POST">
+  <input type="hidden" name="id" value="<%= artista.id || '' %>">
+
+  <label>
+    Nombre:
+    <input type="text" name="nombre" value="<%= artista.nombre || '' %>" required>
+  </label>
+
+  <label>
+    País:
+    <input type="text" name="pais" value="<%= artista.pais || '' %>" required>
+  </label>
+
+  <label>
+    Género:
+    <input type="text" name="genero" value="<%= artista.genero || '' %>" required>
+  </label>
+
+  <label>
+    Año de formación:
+    <input type="number" name="fecha_formacion" value="<%= artista.fecha_formacion || '' %>" required>
+  </label>
+
+  <label>
+    URL de la Foto:
+    <input type="url" name="foto" value="<%= artista.foto || '' %>" placeholder="https://...">
+  </label>
+
+  <div class="preview-box">
+    <p>Vista previa:</p>
+    <img class="preview-img round" src="<%= artista.foto || '/img/placeholder.svg' %>" alt="Vista previa">
+  </div>
+
+  <div class="form-actions">
+    <button class="btn" type="submit">Guardar</button>
+    <a class="btn btn-secondary" href="/artistas">Cancelar</a>
+  </div>
+</form>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,36 @@
+<%- include('partials/header') %>
+
+<div class="page-header">
+  <h1>Lista de Álbumes</h1>
+  <a class="btn" href="/album/form">Añadir Nuevo Álbum</a>
+</div>
+
+<table class="data-table">
+  <thead>
+    <tr>
+      <th>Foto</th>
+      <th>Título</th>
+      <th>Artista</th>
+      <th>Año</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% albumes.forEach(album => { %>
+      <tr>
+        <td>
+          <img class="thumb" src="<%= album.foto || '/img/placeholder.svg' %>" alt="<%= album.titulo %>">
+        </td>
+        <td><%= album.titulo %></td>
+        <td><%= album.artistaNombre %></td>
+        <td><%= album.anio %></td>
+        <td class="actions">
+          <a href="/album/form/<%= album.id %>">Editar</a>
+          <a class="danger-link" href="/album/delete/<%= album.id %>" onclick="return confirm('¿Eliminar este álbum?')">Eliminar</a>
+        </td>
+      </tr>
+    <% }) %>
+  </tbody>
+</table>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,48 @@
+<%- include('partials/header') %>
+
+<h1>Detalle de <%= artista.nombre %></h1>
+
+<section class="detail-card">
+  <img class="detail-img" src="<%= artista.foto || '/img/placeholder.svg' %>" alt="<%= artista.nombre %>">
+
+  <div>
+    <h2><%= artista.nombre %></h2>
+    <p><strong>País:</strong> <%= artista.pais %></p>
+    <p><strong>Género:</strong> <%= artista.genero %></p>
+    <p><strong>Formación:</strong> <%= artista.fecha_formacion %></p>
+
+    <div class="form-actions">
+      <a class="btn" href="/artista/form/<%= artista.id %>">Editar Artista</a>
+      <a class="btn btn-secondary" href="/artistas">Volver</a>
+    </div>
+  </div>
+</section>
+
+<h2>Álbumes</h2>
+
+<% if (albumes.length === 0) { %>
+  <p class="empty">Este artista no tiene álbumes registrados.</p>
+<% } else { %>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Foto</th>
+        <th>Título</th>
+        <th>Año</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% albumes.forEach(album => { %>
+        <tr>
+          <td>
+            <img class="thumb" src="<%= album.foto || '/img/placeholder.svg' %>" alt="<%= album.titulo %>">
+          </td>
+          <td><%= album.titulo %></td>
+          <td><%= album.anio %></td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+<% } %>
+
+<%- include('partials/footer') %>
