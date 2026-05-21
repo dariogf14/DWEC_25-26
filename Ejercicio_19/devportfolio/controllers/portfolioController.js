@@ -1,0 +1,5 @@
+const User=require('../models/userModel');const Project=require('../models/projectModel');const SocialLink=require('../models/socialLinkModel');
+async function allPortfolios(req,res){try{const users=await User.getAll();res.render('all-portfolios',{title:'All Portfolios',users});}catch(e){renderError(res,e);}}
+async function publicPortfolio(req,res){try{const user=await User.getByUsername(req.params.username);if(!user){return res.status(404).render('error',{title:'Portfolio not found',message:'No existe ningún portafolio con ese usuario.'});}const projects=await Project.getByUserId(user.id);const socialLinks=await SocialLink.getByUserId(user.id);const isOwner=req.session.user&&req.session.user.id===user.id;res.render('portfolio',{title:`${user.username} Portfolio`,user,projects,socialLinks,isOwner});}catch(e){renderError(res,e);}}
+function renderError(res,e){console.error(e);res.status(500).render('error',{title:'Error interno',message:'Ha ocurrido un error al cargar el portafolio.'});}
+module.exports={allPortfolios,publicPortfolio};

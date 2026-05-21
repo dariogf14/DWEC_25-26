@@ -1,0 +1,1 @@
+const express=require('express');const c=require('../controllers/portfolioController');const r=express.Router();r.get('/portfolios',c.allPortfolios);r.get('/portfolio/:username',c.publicPortfolio);module.exports=r;

@@ -1,0 +1,1 @@
+const express=require('express');const c=require('../controllers/authController');const{redirectIfAuth}=require('../middlewares/auth');const r=express.Router();r.get('/register',redirectIfAuth,c.showRegister);r.post('/register',redirectIfAuth,c.register);r.get('/login',redirectIfAuth,c.showLogin);r.post('/login',redirectIfAuth,c.login);r.get('/logout',c.logout);module.exports=r;
