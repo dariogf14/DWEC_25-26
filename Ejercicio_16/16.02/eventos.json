@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "titulo": "Congreso de IA Oviedo",
+    "descripcion": "Evento inaugural del año en la ciudad.",
+    "fecha": "2026-01-15"
+  },
+  {
+    "id": 2,
+    "titulo": "Actualización de Seguridad Q1",
+    "descripcion": "Timestamp equivalente al 1 de marzo de 2026.",
+    "fecha": 1772323200000
+  },
+  {
+    "id": 3,
+    "titulo": "Vacaciones de Semana Santa",
+    "descripcion": "Abril. Inicio de temporada alta.",
+    "fecha": {
+      "anio": 2026,
+      "mes": 3,
+      "dia": 1
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Cena de Navidad Empresa",
+    "descripcion": "Diciembre. Ubicación por confirmar.",
+    "fecha": "2026-12-18"
+  },
+  {
+    "id": 5,
+    "titulo": "Fin de Año 2026",
+    "descripcion": "Último evento del calendario actual.",
+    "fecha": "2026-12-31"
+  },
+  {
+    "id": 6,
+    "titulo": "Revisión de Código Pasada",
+    "descripcion": "Evento que ya debería aparecer como finalizado.",
+    "fecha": "2026-01-05"
+  }
+]
